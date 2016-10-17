@@ -1,0 +1,60 @@
+body{
+    background-image: url("../img/fondo.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+}
+a,a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+.container{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.linkbar{
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #b88c41 0%, #e0af46 50%);
+    color: #FFF;
+}
+.linkbar li{
+    display: block;
+    list-style: none;
+    padding: 10px;
+    margin-right: 10px;
+    float: left;
+}
+.linkbar li:hover,.btn:hover{
+    background-image: linear-gradient(to bottom, #cca044 0%, #ffc850 50%);
+}
+.body{
+    margin-top:5px ;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 4px 5px 9px #000000;
+}
+.btn{
+    padding: 5px;
+    color: #FFFFFF;
+    border: none;
+    background-image: linear-gradient(to bottom, #b88c41 0%, #e0af46 50%);
+    background-color: transparent;
+}
+.recipe{
+    display: block;
+    border: 0.1px solid #CCCCCC;
+    margin-right:30px;
+    padding: 2px;
+    float: left;
+    /*box-shadow: 4px 5px 9px #000000;*/
+}
+.recipe:hover{
+    box-shadow: 4px 5px 9px #000000;
+    transition: all 0.2s;
+}
+.recipe img{
+    width: 200px;
+    height: 200px;
+}
