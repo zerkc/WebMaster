@@ -24,7 +24,7 @@
                 <table>
                     <tr>
                         <td> Nombre:</td>
-                        <td><input type="text" style="width: 400px"></td>
+                        <td><input type="text" style="width: 400px" required></td>
                     </tr>
                     <tr>
                         <td>Apellido:</td>
@@ -32,12 +32,40 @@
                     </tr>
                     <tr>
                         <td>Email:</td>
-                        <td><input type="text" style="width: 400px"></td>
+                        <td><input type="email" style="width: 400px" required></td>
                     </tr>
                     <tr>
                         <td>Telefono:</td>
-                        <td><input type="text" style="width: 400px"></td>
+                        <td><input type="text" style="width: 400px" required></td>
                     </tr>
+		    <tr>
+			<td>Intereses:</td>
+			<td>
+			<label for="postres">Postres</label>
+			<input type="checkbox" name="postres" id="postres" value="postres">
+			<br>
+			<label for="pp">Platillos profesionales</label>
+                        <input type="checkbox" name="pp" id="pp" value="pp">
+                        <br>
+			<label for="cc">Platillos Caseros</label>
+			<input type="checkbox" name="cc" id="cc" value="cc">
+		    </td>
+		    <tr>
+                        <td>Sexo:</td>
+                        <td>
+                        <label for="sexoh">Hombre</label>
+                        <input type="radio" name="sexo" id="sexoh" required value="H">
+                        <label for="sexom">Mujer</label>
+                        <input type="radio" name="sexo" id="sexom" value="M">
+                    </td>
+                    <tr>
+			<td>Pais:</td>
+			<td>
+			<select id="pais" name="pais" required>
+			<option value="">Seleccione Pais</option>
+			<option value="venezuela">Venezuela</option>
+			</select>
+		    </tr>
                     <tr>
                         <td valign="top">Comentario:</td>
                         <td><textarea name="" id="" cols="50" rows="10"></textarea></td>
