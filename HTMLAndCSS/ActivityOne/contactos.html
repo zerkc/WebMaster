@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Actividad uno HTML y CSS Gustavo Gonzalez</title>
 </head>
@@ -10,72 +13,73 @@
     <div class="header">
 
     </div>
-    <div class="linkbar">
+    <div class="col-sm-12 col-md-12 col-lg-12 linkbar">
         <ul>
             <a href="./"><li>Inicio</li></a>
             <a href="contactos.html"><li>Contactos</li></a>
         </ul>
         <div style="clear: both"></div>
     </div>
-    <div class="body">
-        <center>
-            <h1>Formulario de Contactos</h1>
-            <form action="#">
-                <table>
-                    <tr>
-                        <td> Nombre:</td>
-                        <td><input type="text" style="width: 400px" required></td>
-                    </tr>
-                    <tr>
-                        <td>Apellido:</td>
-                        <td><input type="text" style="width: 400px"></td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td><input type="email" style="width: 400px" required></td>
-                    </tr>
-                    <tr>
-                        <td>Telefono:</td>
-                        <td><input type="text" style="width: 400px" required></td>
-                    </tr>
-		    <tr>
-			<td>Intereses:</td>
-			<td>
-			<label for="postres">Postres</label>
-			<input type="checkbox" name="postres" id="postres" value="postres">
-			<br>
-			<label for="pp">Platillos profesionales</label>
-                        <input type="checkbox" name="pp" id="pp" value="pp">
-                        <br>
-			<label for="cc">Platillos Caseros</label>
-			<input type="checkbox" name="cc" id="cc" value="cc">
-		    </td>
-		    <tr>
-                        <td>Sexo:</td>
-                        <td>
-                        <label for="sexoh">Hombre</label>
-                        <input type="radio" name="sexo" id="sexoh" required value="H">
-                        <label for="sexom">Mujer</label>
-                        <input type="radio" name="sexo" id="sexom" value="M">
-                    </td>
-                    <tr>
-			<td>Pais:</td>
-			<td>
-			<select id="pais" name="pais" required>
-			<option value="">Seleccione Pais</option>
-			<option value="venezuela">Venezuela</option>
-			</select>
-		    </tr>
-                    <tr>
-                        <td valign="top">Comentario:</td>
-                        <td><textarea name="" id="" cols="50" rows="10"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" align="center"><input type="submit" class="btn" value="Enviar"> <input type="reset" class="btn" value="Limpiar"></td>
-                    </tr>
-                </table>
-            </form>
-        </center>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 body">
+        <h1 style="margin: 0 auto">Formulario de Contactos</h1>
+        <form class="contacts" action="#">
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Nombre:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" class="form-control" required></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Apellido:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" class="form-control"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Email:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="email" class="form-control"  required></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Telefono:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" class="form-control"  required></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Intereses:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <label>Postres
+                        <input type="checkbox" name="postres" id="postres" value="postres"></label>
+                    <br>
+                    <label>Platillos profesionales
+                        <input type="checkbox" name="pp" id="pp" value="pp"></label>
+                    <br>
+                    <label>Platillos Caseros
+                        <input type="checkbox" name="cc" id="cc" value="cc"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Sexo:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <label for="sexoh">Hombre
+                        <input type="radio" name="sexo" id="sexoh" required value="H"></label>
+                    <label for="sexom">Mujer
+                        <input type="radio" name="sexo" id="sexom" value="M"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Pais:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <select id="pais" name="pais" class="form-control" required>
+                        <option value="">Seleccione Pais</option>
+                        <option value="venezuela">Venezuela</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Comentario:</div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><textarea class="form-control" name="" id="" cols="50" rows="10"></textarea></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center">
+                    <input type="submit" class="btn" value="Enviar"> <input type="reset" class="btn" value="Limpiar">
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 </body>

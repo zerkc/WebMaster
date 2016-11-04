@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Actividad uno HTML y CSS Gustavo Gonzalez</title>
 </head>
 <body>
 <div class="container">
-    <div class="header">
+    <!--<div class="header">-->
 
-    </div>
-    <div class="linkbar">
+    <!--</div>-->
+    <div class="col-sm-12 col-md-12 col-lg-12 linkbar">
         <ul>
             <a href="./"><li>Inicio</li></a>
             <a href="contactos.html"><li>Contactos</li></a>
         </ul>
         <div style="clear: both"></div>
     </div>
-    <div class="body">
-        <table style="width: 100%">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 body">
+        <div class="visible-xs">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="img/brownie.jpg" class="img-responsive" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Ingredientes</h2>
+                    <ul>
+                        <li>4 huevos</li>
+                        <li>300 gramos azúcar</li>
+                        <li>100 gramos harina leudante</li>
+                        <li>150 gramos chocolate semiamargo</li>
+                        <li>150 gramos manteca</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Preparacion</h2>
+                    <ul class="step">
+                        <li><b>1</b> Poner en baño maría el chocolate junto con la manteca.</li>
+                        <li><b>2</b> En un bol poner los huevos, agregar el Azúcar, batir y luego agregar la harina y mezclar.</li>
+                        <li><b>3</b> Luego, cuando se derrite el chocolate y la manteca agregarlo a la mezcla.</li>
+                        <li><b>4</b> En un molde enmantecar y ponerlo al horno 20 a 25 minutos. Disfrutar.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <table class="hidden-xs" style="width: 100%">
             <tr>
                 <td style="width: 100%">
                     <h2>Ingredientes</h2>
@@ -50,30 +82,31 @@
         <hr>
         <h1>Otras recetas</h1>
 
-        <div class="recipe">
+        <div class="col-xs-10 col-sm-4 col-md-4 col-lg-3 recipe">
             <a href="lemonpie.html">
-                <img src="img/lemonpie.jpg" alt="">
+                <img src="img/lemonpie.jpg" class="img-responsive" alt="">
                 <h3>Pie de Limon</h3>
             </a>
         </div>
 
-        <div class="recipe">
+
+        <div class="col-xs-10 col-sm-4 col-md-4 col-lg-3 recipe">
             <a href="tequenos.html">
-                <img src="img/tequeno.jpg" alt="">
+                <img src="img/tequeno.jpg" class="img-responsive" alt="">
                 <h3>Tequeños</h3>
             </a>
         </div>
 
-        <div class="recipe">
+        <div class="col-xs-10 col-sm-4 col-md-4 col-lg-3 recipe">
             <a href="donuts.html">
-                <img src="img/donuts.jpeg" alt="">
+                <img src="img/donuts.jpeg" class="img-responsive" alt="">
                 <h3>Donuts</h3>
             </a>
         </div>
 
-        <div class="recipe">
+        <div class="col-xs-10 col-sm-4 col-md-4 col-lg-3 recipe">
             <a href="cheese_cake.html">
-                <img src="img/cheesecake.jpg" alt="">
+                <img src="img/cheesecake.jpg" class="img-responsive" alt="">
                 <h3>Cheese Cake</h3>
             </a>
         </div>
