@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/functions.js"></script>
+    <script>
+        validateSession();
+    </script>
+</head>
+<body>
+    <section class="col-xs-12 col-md-10 col-center container">
+        <h1 id="title">{{Title}}</h1>
+        <h3>Cursos disponibles</h3>
+        <hr>
+        <div class="row">
+            <div class="col-sm-5 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/html5.png" >
+                    <div class="caption">
+                        <div class="description">
+                        <h3>HTML 5</h3>
+                            <p>En este curso te enseñaremos
+                                las nuevas funcionales que trae para ti html5</p>
+                        </div>
+                        <p style="text-align: center"><a pagelink="html5" class="btn btn-primary" role="button">Ver Curso</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/css.jpg" >
+                    <div class="caption">
+                        <div class="description">
+                        <h3>CSS 3</h3>
+                            <p>En este curso te enseñaremos a darle una
+                                apariencia visual mejorada a tu pagina web</p>
+                        </div>
+                        <p style="text-align: center"><a pagelink="css3" class="btn btn-primary" role="button">Ver Curso</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/js.png" >
+                    <div class="caption">
+                        <div class="description">
+                        <h3>CSS 3</h3>
+                            <p>En este curso te enseñaremos a utilizar funciones
+                            JavaScript para dar una mejor experiencia al usuario</p>
+                        </div>
+                        <p style="text-align: center"><a pagelink="js" class="btn btn-primary" role="button">Ver Curso</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+</html>

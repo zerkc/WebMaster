@@ -1,0 +1,33 @@
+body{
+    background-color: #080808;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.col-center{
+    float: none;
+    margin: 0 auto;
+}
+.container{
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 15px;
+}
+.description{
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 80%;
+    /* word-wrap: break-word; */
+    /* word-break: break-all; */
+    background-color: rgba(80,80,80,0.9);
+    height: 70%;
+    color: #FFF;
+    padding: 5px;
+}
+.thumbnail img{
+    height: 200px;
+}

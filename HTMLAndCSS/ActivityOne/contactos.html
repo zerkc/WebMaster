@@ -25,11 +25,11 @@
         <form class="contacts" action="#">
             <div class="row">
                 <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Nombre:</div>
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" class="form-control" required></div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" pattern="[a-zA-Zá-úÁ-Ú' ]{3,}" class="form-control" required></div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Apellido:</div>
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" class="form-control"></div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" pattern="[a-zA-Zá-úÁ-Ú' ]{3,}" class="form-control"></div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Email:</div>
@@ -37,7 +37,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Telefono:</div>
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="text" class="form-control"  required></div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input type="tel" class="form-control" pattern="[+][0-9]{9,}" title="+584110000000" required></div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Intereses:</div>
