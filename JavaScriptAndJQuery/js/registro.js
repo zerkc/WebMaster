@@ -1,9 +1,56 @@
+$.validator.addMethod(
+        "regex",
+        function(value, element, regexp) {
+            if(value == undefined) value ="";
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "El campo no coincide con el patron."
+);
 $(document).ready(function(){
     $("#registro").click(save);
     $("#pais").change(changePais);
     $("#tel").keyup(deltext);
     $("#tel").keydown(deltext);
     $("#tel").keypress(isNumberKey);
+    $(".form-horizontal").validate({
+        rules:{
+            name:{
+                required: true,
+                regex: "^[a-zA-Z\']{3,}[ ]{0,1}$"
+            },
+            email:{
+                required: true,
+                regex: "^[a-zA-Z0-9\\._\\-]{2,}[@][a-zA-Z0-9\\-]{2,}([\\.][a-zA-Z]{2,}){1,2}$"
+            },
+            username:{
+                required: true,
+                regex: "^([a-zA-Z]{1,}[a-zA-Z0-9]{0,}){5,}$"
+            },
+            tel:{
+                required: true,
+                regex: "^\\(\\+[0-9]{2,3}\\)[ ]{0,}[0-9]{5,}$"
+            }
+        },
+        messages:{
+            name:{
+                required: "ingrese un nombre",
+                regex: "Solo Letras"
+            },
+            email:{
+                required: "Ingrese un email",
+                regex: "Correo Electronico"
+            },
+            username:{
+                required: "Ingrese Nombre de usuario",
+                regex: "minimo 5 caracteres, debe empezar en letra,no puede contener carecteres especiales"
+            },
+            tel:{
+                required: "Ingrese telefono",
+                regex: "no cumple con el formato de telefono (+000) 999999"
+            }
+        }
+    });
 });
 function validar(){
     var campos = [
@@ -29,7 +76,7 @@ function validar(){
         }
     ]
     for(i in campos){
-        if(!validateRegex($("#"+campos[i].name).value,campos[i].pattern)){
+        if(!validateRegex($("#"+campos[i].name).val(),campos[i].pattern)){
             alertValidate(campos[i].name,campos[i].message);
             return false;
         }
@@ -57,6 +104,7 @@ function save(){
         alert('nombre de usuario ya existente');
         return;
     }
+    
     if(validar()){
         usuarios[$('#username').val()] = {};
         usuarios[$('#username').val()]['name'] = $('#name').val();
@@ -77,9 +125,9 @@ function save(){
 }
 
 function changePais(){
-    $('#tel').disabled = false;
+    $('#tel').prop("disabled",false);
     $('#tel').val($('#tel').val().replace(new RegExp('\\(\\+[0-9]{2,3}\\)[ ]{0,1}'),""));
-    switch (this.val()){
+    switch ($(this).val()){
         case "ar":
             $('#tel').val('(+54) '+$('#tel').val());
             break;
@@ -88,7 +136,7 @@ function changePais(){
             break;
         default :
             $('#tel').val('');
-            $('#tel').disabled = true;
+            $('#tel').prop("disabled",true);
     }
 }
 function deltext(){

@@ -20,13 +20,12 @@ body{
     display: none;
     position: absolute;
     top: 0px;
-    width: 80%;
-    /* word-wrap: break-word; */
-    /* word-break: break-all; */
-    background-color: rgba(80,80,80,0.9);
-    height: 70%;
-    color: #FFF;
+    width: 88%;
+    background-color: rgba(80, 80, 80, 0.898);
+    height: 93%;
+    color: rgb(255, 255, 255);
     padding: 5px;
+    margin-left: -13px;
 }
 .thumbnail img{
     height: 200px;
