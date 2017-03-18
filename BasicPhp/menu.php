@@ -8,7 +8,11 @@
 include_once 'functions.php';
 $menu['Inicio'] = "./";
 $menu['Contactos'] = "contactos.php";
-
+if(!isset($_SESSION['userActive'])){
+    $menu['Iniciar Sesion'] = "index.php?page=login";
+}else{
+    $menu['Desconectar'] = "logout.php";
+}
 ?>
 
 <div class="col-sm-12 col-md-12 col-lg-12 linkbar">

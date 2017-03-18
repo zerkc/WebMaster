@@ -6,6 +6,9 @@
  * Time: 12:05 AM
  */
 
+if(!isset($_SESSION)){
+    session_start();
+}
 
 /*
  * revice las funcione del final profesor
@@ -43,6 +46,10 @@ function message($msg,$type=0){
     echo "<div class='alert alert-{$class}'>
             {$msg}
             </div>";
+}
+function redirect($url){
+    header("Location: $url");
+    die();
 }
 
 function isEmpty($val){
@@ -85,6 +92,10 @@ function validaAlfaNum ($Cad) {
 function validaEntero ($texto) {
     // prueba si la entrada es un entero, sin signo
     return preg_match("/^[0-9]+$/", $texto );
+}
+
+function validarFecha($f){
+    return preg_match("/^[0-9]{1,2}[\/][0-9]{1,2}[\/][0-9]{4}$/", $f );
 }
 
 // funcion para validad un entero con signo opcional

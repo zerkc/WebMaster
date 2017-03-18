@@ -10,5 +10,6 @@ include_once 'functions.php';
 
 foreach($recipe as $dress){
     if($thispage == $dress['url']) continue;
+    if(!isset($_SESSION['userActive']) && !$dress['access']) continue;
     echo createElement($dress['name'],$dress['url'],$dress['image']);
 }

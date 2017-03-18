@@ -1,3 +1,10 @@
+<?php
+    $thispage = $page;
+    if(!isset($_SESSION['userActive']) && !$recipe[$page]['access']){
+        $_SESSION['msg']='Debe iniciar session para acceder a esta pantalla';
+        redirect("?page=login");
+    }
+?>
         <div class="visible-xs">
             <div class="row">
                 <div class="col-xs-12">

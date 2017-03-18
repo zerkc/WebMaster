@@ -9,7 +9,7 @@ $interest = $_POST['interest'];
 $gen = $_POST['gen'];
 $country = $_POST['pais'];
 $coment = $_POST['coment'];
-$dat = date("d-m-Y");
+$dat = date("d/m/Y");
 if(isset($_POST['date'])) $dat = $_POST['date'];
 $error = 8;
 $validate = false;
@@ -79,9 +79,10 @@ if(isset($_POST['send'])){
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 col-md-offset-3 col-sm-offset-2">Fecha del envio:</div>
-                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input name="date" type="text" class="form-control" readonly value="<?php echo $dat; ?>">
+                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><input name="date" type="text" class="form-control" placeholder="DD/MM/AAAA" value="<?php echo $dat; ?>">
                         <?php if($validate) {
                             if(isEmpty($dat)) messageRequired();
+                            elseif(!validarFecha($dat)) message("Formato incorrecto de fecha",2);
                             else $error--;
                         } ?>
                     </div>

@@ -9,6 +9,7 @@
     $recipe['lemonpie']['name'] = "Pie de Limon";
     $recipe['lemonpie']['image'] = "lemonpie.jpg";
     $recipe['lemonpie']['url'] = "lemonpie";
+    $recipe['lemonpie']['access'] = true;
     $recipe['lemonpie']['ingredients']['PARA LA BASE:'][] = "25 galletas maría";
     $recipe['lemonpie']['ingredients']['PARA LA BASE:'][] = "50 gr mantequilla derretida";
     $recipe['lemonpie']['ingredients']['PARA EL RELLENO:'][] = "2 latas leche condensada (370gr cada una)";
@@ -33,6 +34,7 @@
     $recipe['brownie']['name'] = "Brownie de Chocolate";
     $recipe['brownie']['image'] = "brownie.jpg";
     $recipe['brownie']['url'] = "brownie";
+    $recipe['brownie']['access'] = false;
     $recipe['brownie']['ingredients'][] = "4 huevos";
     $recipe['brownie']['ingredients'][] = "300 gramos azúcar";
     $recipe['brownie']['ingredients'][] = "100 gramos harina leudante";
@@ -46,6 +48,7 @@
     $recipe['tequenos']['name'] = "Tequeños";
     $recipe['tequenos']['image'] = "tequeno.jpg";
     $recipe['tequenos']['url'] = "tequenos";
+    $recipe['tequenos']['access'] = true;
     $recipe['tequenos']['ingredients']['PARA LA BASE:'][] = "2 tazas harina de trigo";
     $recipe['tequenos']['ingredients']['PARA LA BASE:'][] = "1 cucharadita polvo royal";
     $recipe['tequenos']['ingredients']['PARA LA BASE:'][] = "1 huevo";
@@ -63,6 +66,7 @@
     $recipe['donuts']['name'] = "Donuts";
     $recipe['donuts']['image'] = "donuts.jpeg";
     $recipe['donuts']['url'] = "donuts";
+    $recipe['donuts']['access'] = false;
     $recipe['donuts']['ingredients']['PARA LA BASE:'][] = "20 gr levadura";
     $recipe['donuts']['ingredients']['PARA LA BASE:'][] = "100 ml agua tibia";
     $recipe['donuts']['ingredients']['PARA LA BASE:'][] = "290 gr harina";
@@ -88,6 +92,7 @@
     $recipe['cheese_cake']['name'] = "Cheese Cake";
     $recipe['cheese_cake']['image'] = "cheesecake.jpg";
     $recipe['cheese_cake']['url'] = "cheese_cake";
+    $recipe['cheese_cake']['access'] = false;
     $recipe['cheese_cake']['ingredients'][] = "250 g mermelada de frutilla";
     $recipe['cheese_cake']['ingredients'][] = "5 claras";
     $recipe['cheese_cake']['ingredients'][] = "1 pote queso crema";
@@ -130,8 +135,12 @@
         }elseif(file_exists("{$page}.php")){
             include "{$page}.php";
         }
-
-        include 'recipe.php'; 
+        if($page != "login") {
+		    if(!isset($_SESSION['userActive'])){
+                message("Algunas recetas pueden no aparecer hasta que se inicie session",2);
+            }
+            include 'recipe.php';
+        }
         ?>
 
         <div style="clear: both"></div>
